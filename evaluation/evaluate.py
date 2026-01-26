@@ -6,7 +6,7 @@ import regex as re
 from tqdm import tqdm
 import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from model_response import LLM_Role, Ours_Agent, Ours_LLM, SoulChat2, SoulChat_R1
+from evaluation.models import LLM_Role, PsycheChat_Agent_Mode, PsycheChat_LLM_Mode, SoulChat2, SoulChat_R1
 
 def read_json(file_path):
     try:
@@ -139,8 +139,8 @@ def compute_emotion_score(emotions):
 doc_type_dict = {
     'soulchat2': SoulChat2,
     'soulchat-r1': SoulChat_R1,
-    'ours-llm': Ours_LLM,
-    'ours-agent': Ours_Agent,
+    'psychechat-llm-mode': PsycheChat_LLM_Mode,
+    'psychechat-agent-mode': PsycheChat_Agent_Mode,
 }
 
 def process_one_run(card, ill_model, doc_model):
@@ -177,7 +177,7 @@ def process_one_run(card, ill_model, doc_model):
             risk_level += ill_res['risk']
             if end_flag == True:
                 break
-            if type(doc_model).__name__ in ['Ours_Agent', 'No_Emotion', 'No_Safety', 'No_Emotion_Safety', 'Ours_LLM']:
+            if type(doc_model).__name__ in ['PsycheChat_Agent_Mode', 'No_Emotion', 'No_Safety', 'No_Emotion_Safety', 'PsycheChat_LLM_Mode']:
                 doc_res, counselor = doc_model.__call__(messages_doc, counselor)
             else:
                 doc_res=doc_model.__call__(messages_doc)

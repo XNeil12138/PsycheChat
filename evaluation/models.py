@@ -103,7 +103,7 @@ class LLM_Role():
                 continue
         return None, None
     
-class Ours_LLM():
+class PsycheChat_LLM_Mode():
     def __init__(self, model_name='', api_key = '', base_url='', aux_model_name='', aux_api_key='', aux_base_url=''):
         self.model_name = model_name
         self.api_key = api_key
@@ -126,7 +126,7 @@ class Ours_LLM():
         })
         return counselor_reponse, counselor
     
-class Ours_Agent():
+class PsycheChat_Agent_Mode():
     def __init__(self, model_name='', api_key = '', base_url='', aux_model_name='', aux_api_key = '', aux_base_url=''):
         self.counselor_model_name = model_name
         self.counselor_api_key = api_key
