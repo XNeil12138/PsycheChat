@@ -109,7 +109,7 @@ while True:
 
 ---
 
-# 📚 Citation
+<!-- # 📚 Citation
 
 If you use PsychēChat in your research, please cite:
 
@@ -120,4 +120,4 @@ If you use PsychēChat in your research, please cite:
   journal={arXiv preprint arXiv:2601.12392},
   year={2026}
 }
-```
+``` -->
