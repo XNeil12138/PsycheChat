@@ -131,10 +131,12 @@ def compute_emotion_score(emotions):
         "烦躁": -1, "生气": -2, "暴怒": -3,
         "关心": 1, "期待": 2, "警惕": 0,
     }
-    score = 0
-    for emo in emotions:
-        score += emotion_score_map.get(emo, 0)
-    return score
+    weights = {
+        1: [1.0],
+        2: [0.7, 0.3],
+        3: [0.6, 0.3, 0.1],
+    }.get(len(emotions), [])
+    return sum(emotion_score_map.get(emo, 0) * weight for emo, weight in zip(emotions, weights))
     
 doc_type_dict = {
     'soulchat2': SoulChat2,

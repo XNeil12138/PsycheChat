@@ -80,7 +80,7 @@ class LLM_Role():
         max_temperature = 1.0
         for i in range(20):
             try:
-                seeker_res = call_llm(self.client, messages, self.model_name, temperature=temperature, sleep_time=sleep_time, thinking=thinking)
+                seeker_res = call_llm(self.client, messages, self.model_name, temperature=temperature, sleep_time=sleep_time, enable_thinking=thinking)
                 seeker_res = self.get_json(seeker_res)
                 seeker_emotion = seeker_res['emotion']
                 if not self.validate_emotion(seeker_emotion):

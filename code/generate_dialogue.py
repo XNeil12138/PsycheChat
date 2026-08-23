@@ -334,7 +334,7 @@ def generate(card, ablation_type, counselor_model, seeker_model, show_log=False,
                 if history_seeker == []:
                     history_seeker.append({'role': 'user', 'content': '请你以一个简短的回复开启咨询'})
                 messages_seeker = [{'role': 'system', 'content': system_seeker}] + history_seeker
-                result, seeker_res, seeker_response, end_flag = seeker_generate(result, messages_seeker, counselor_model, max_llm_retries)
+                result, seeker_res, seeker_response, end_flag = seeker_generate(result, messages_seeker, seeker_model, max_llm_retries)
                 if show_utterance: print(f'来访者：{seeker_response}')
                 history_seeker.append({'role': 'assistant', 'content': json.dumps(seeker_res, indent=4, ensure_ascii=False)})
                 history_counselor.append({'role': 'user', 'content': seeker_response})

@@ -1,4 +1,7 @@
 pybind11
+openai>=1.0.0
+regex
+tqdm
 
 torch==2.7.1
 torchvision==0.22.1

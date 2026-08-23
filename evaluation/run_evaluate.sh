@@ -1,10 +1,10 @@
 python ./evaluation/evaluate.py \
     --evaluete_file ./evaluation/role_card/role_cards_test.json \
     --result_dir ./evaluation/result \
-    --ill_model_type gemini-2.5-flash \
+    --ill_model_name gemini-2.5-flash \
     --ill_api_key "" \
     --ill_base_url "" \
-    --doc_model_name ours-agent \
+    --doc_model_name psychechat-agent-mode \
     --doc_api_key "" \
     --doc_base_url "" \
     --aux_model_name seeker \
