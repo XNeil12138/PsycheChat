@@ -47,6 +47,8 @@ We provide the counseling dialogue dataset PsychēDialog constructed in PsychēC
 | [**PsycheDialog-Counselor-LLM-Mode**](https://huggingface.co/datasets/Johnnyfans/PsycheDialog-Counselor-LLM-Mode) | Training data in the LLM Mode. |
 | [**PsycheDialog-Seeker**](https://huggingface.co/datasets/Johnnyfans/PsycheDialog-Seeker) | Training data for Dialogue-Guided Seeker in the Agent Mode. |
 
+PsychēDialog uses 5,000 multi-turn dialogues from [PsyDT](https://github.com/scutcyr/SoulChat2.0) as seed data. We thank the PsyDT authors for releasing their work.
+
 ---
 
 ## 🚀 Inference Quick Start
