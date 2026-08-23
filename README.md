@@ -5,7 +5,7 @@
 Welcome to **PsychēChat** 🎉
 We propose a framework **PsychēChat**: An Empathic Framework Focused on *Emotion Shift Tracking* and *Safety Risk Analysis* in Psychological Counseling.
 
-**PsychēChat has been accepted to the EMNLP 2026 Main Conference.**
+**PsychēChat has been accepted to the EMNLP 2026 Main Conference.**	🎉🎉🎉
 
 <div align="center">
     <img src="figure/framework.png">
